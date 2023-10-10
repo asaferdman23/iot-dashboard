@@ -1,0 +1,30 @@
+# node package manager
+node_modules
+
+# local env files
+.env*.local
+.env
+
+# package files
+package-lock.json
+yarn.lock
+package.json
+
+# next.js build output
+/.next/
+
+# production build output
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+
+#vercel
+.vercel
+
+#Firebase
+.firebase.js
