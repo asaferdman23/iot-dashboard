@@ -1,3 +1,19 @@
+"use client"
+import React from 'react';
+import 'react-photo-view/dist/react-photo-view.css';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+
+export default function PhotoViewer() {
+  return (
+    <PhotoProvider>
+      <div className="foo">
+          <PhotoView>
+            <img src='./M_blue.svg.png' alt="" />
+          </PhotoView>
+      </div>
+    </PhotoProvider>
+  );
+}
 // import React, { useState, useEffect } from 'react';
 // //import { database, storage } from './firebase'; // Import your Firebase configuration
 

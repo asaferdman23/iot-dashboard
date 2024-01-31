@@ -7,4 +7,9 @@ export const theme = {
       white: "#FFFFFF",
     },
   };
-  
+export const container={
+  container:{
+    display: flex,
+    flex-direction: column,
+  },
+};

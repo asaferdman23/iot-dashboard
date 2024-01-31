@@ -24,3 +24,10 @@ body {
   );
   color: rgba(var(--foreground-rgb), 1);
 }
+
+@media screen and (min-width: 415px){
+  .site-container  > *{ 
+    flex: 1;
+    flex-direction: row;
+  }
+}
