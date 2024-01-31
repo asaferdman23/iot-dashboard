@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "vendor-chunks/reinterval";
+exports.ids = ["vendor-chunks/reinterval"];
+exports.modules = {
+
+/***/ "(ssr)/./node_modules/reinterval/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/reinterval/index.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+eval("\n\nfunction ReInterval (callback, interval, args) {\n  var self = this;\n\n  this._callback = callback;\n  this._args = args;\n\n  this._interval = setInterval(callback, interval, this._args);\n\n  this.reschedule = function (interval) {\n    // if no interval entered, use the interval passed in on creation\n    if (!interval)\n      interval = self._interval;\n\n    if (self._interval)\n      clearInterval(self._interval);\n    self._interval = setInterval(self._callback, interval, self._args);\n  };\n\n  this.clear = function () {\n    if (self._interval) {\n      clearInterval(self._interval);\n      self._interval = undefined;\n    }\n  };\n  \n  this.destroy = function () {\n    if (self._interval) {\n      clearInterval(self._interval);\n    }\n    self._callback = undefined;\n    self._interval = undefined;\n    self._args = undefined;\n  };\n}\n\nfunction reInterval () {\n  if (typeof arguments[0] !== 'function')\n    throw new Error('callback needed');\n  if (typeof arguments[1] !== 'number')\n    throw new Error('interval needed');\n\n  var args;\n\n  if (arguments.length > 0) {\n    args = new Array(arguments.length - 2);\n\n    for (var i = 0; i < args.length; i++) {\n      args[i] = arguments[i + 2];\n    }\n  }\n\n  return new ReInterval(arguments[0], arguments[1], args);\n}\n\nmodule.exports = reInterval;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvcmVpbnRlcnZhbC9pbmRleC5qcyIsIm1hcHBpbmdzIjoiQUFBWTs7QUFFWjtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBOztBQUVBLG9CQUFvQixpQkFBaUI7QUFDckM7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9pb3RfY2hlY2svLi9ub2RlX21vZHVsZXMvcmVpbnRlcnZhbC9pbmRleC5qcz85MjdjIl0sInNvdXJjZXNDb250ZW50IjpbIid1c2Ugc3RyaWN0J1xuXG5mdW5jdGlvbiBSZUludGVydmFsIChjYWxsYmFjaywgaW50ZXJ2YWwsIGFyZ3MpIHtcbiAgdmFyIHNlbGYgPSB0aGlzO1xuXG4gIHRoaXMuX2NhbGxiYWNrID0gY2FsbGJhY2s7XG4gIHRoaXMuX2FyZ3MgPSBhcmdzO1xuXG4gIHRoaXMuX2ludGVydmFsID0gc2V0SW50ZXJ2YWwoY2FsbGJhY2ssIGludGVydmFsLCB0aGlzLl9hcmdzKTtcblxuICB0aGlzLnJlc2NoZWR1bGUgPSBmdW5jdGlvbiAoaW50ZXJ2YWwpIHtcbiAgICAvLyBpZiBubyBpbnRlcnZhbCBlbnRlcmVkLCB1c2UgdGhlIGludGVydmFsIHBhc3NlZCBpbiBvbiBjcmVhdGlvblxuICAgIGlmICghaW50ZXJ2YWwpXG4gICAgICBpbnRlcnZhbCA9IHNlbGYuX2ludGVydmFsO1xuXG4gICAgaWYgKHNlbGYuX2ludGVydmFsKVxuICAgICAgY2xlYXJJbnRlcnZhbChzZWxmLl9pbnRlcnZhbCk7XG4gICAgc2VsZi5faW50ZXJ2YWwgPSBzZXRJbnRlcnZhbChzZWxmLl9jYWxsYmFjaywgaW50ZXJ2YWwsIHNlbGYuX2FyZ3MpO1xuICB9O1xuXG4gIHRoaXMuY2xlYXIgPSBmdW5jdGlvbiAoKSB7XG4gICAgaWYgKHNlbGYuX2ludGVydmFsKSB7XG4gICAgICBjbGVhckludGVydmFsKHNlbGYuX2ludGVydmFsKTtcbiAgICAgIHNlbGYuX2ludGVydmFsID0gdW5kZWZpbmVkO1xuICAgIH1cbiAgfTtcbiAgXG4gIHRoaXMuZGVzdHJveSA9IGZ1bmN0aW9uICgpIHtcbiAgICBpZiAoc2VsZi5faW50ZXJ2YWwpIHtcbiAgICAgIGNsZWFySW50ZXJ2YWwoc2VsZi5faW50ZXJ2YWwpO1xuICAgIH1cbiAgICBzZWxmLl9jYWxsYmFjayA9IHVuZGVmaW5lZDtcbiAgICBzZWxmLl9pbnRlcnZhbCA9IHVuZGVmaW5lZDtcbiAgICBzZWxmLl9hcmdzID0gdW5kZWZpbmVkO1xuICB9O1xufVxuXG5mdW5jdGlvbiByZUludGVydmFsICgpIHtcbiAgaWYgKHR5cGVvZiBhcmd1bWVudHNbMF0gIT09ICdmdW5jdGlvbicpXG4gICAgdGhyb3cgbmV3IEVycm9yKCdjYWxsYmFjayBuZWVkZWQnKTtcbiAgaWYgKHR5cGVvZiBhcmd1bWVudHNbMV0gIT09ICdudW1iZXInKVxuICAgIHRocm93IG5ldyBFcnJvcignaW50ZXJ2YWwgbmVlZGVkJyk7XG5cbiAgdmFyIGFyZ3M7XG5cbiAgaWYgKGFyZ3VtZW50cy5sZW5ndGggPiAwKSB7XG4gICAgYXJncyA9IG5ldyBBcnJheShhcmd1bWVudHMubGVuZ3RoIC0gMik7XG5cbiAgICBmb3IgKHZhciBpID0gMDsgaSA8IGFyZ3MubGVuZ3RoOyBpKyspIHtcbiAgICAgIGFyZ3NbaV0gPSBhcmd1bWVudHNbaSArIDJdO1xuICAgIH1cbiAgfVxuXG4gIHJldHVybiBuZXcgUmVJbnRlcnZhbChhcmd1bWVudHNbMF0sIGFyZ3VtZW50c1sxXSwgYXJncyk7XG59XG5cbm1vZHVsZS5leHBvcnRzID0gcmVJbnRlcnZhbDtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/reinterval/index.js\n");
+
+/***/ })
+
+};
+;
