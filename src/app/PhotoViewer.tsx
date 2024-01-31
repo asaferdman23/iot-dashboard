@@ -8,7 +8,6 @@ export default function PhotoViewer() {
     <PhotoProvider>
       <div className="foo">
           <PhotoView>
-            <img src='./M_blue.svg.png' alt="" />
           </PhotoView>
       </div>
     </PhotoProvider>

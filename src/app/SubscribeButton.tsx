@@ -20,11 +20,25 @@ export const SubscribeButton = () => {
             console.log(`${topic}: ${message.toString()}`);
         });
     }
+    const buttonStyle = {
+        backgroundColor: '#007AFF',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '12px',
+        padding: '10px 20px',
+        fontSize: '16px',
+        boxShadow: '0px 2px 5px rgba(0,0,0,0.25)',
+        outline: 'none',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+        cursor: 'pointer'
+    };
 
     return (
         <div>
-            <button className="subscribe-button" onClick={handleButtonClick}>Subscribe to mqtt</button>
+            <button className="subscribe-button" onClick={handleButtonClick} style={buttonStyle} >Subscribe to mqtt</button>
         </div>
     ); 
+
+
 };
 export default SubscribeButton;
